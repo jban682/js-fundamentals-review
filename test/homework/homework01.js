@@ -32,17 +32,17 @@ myFavoriteLetter
 **/
 console.log("\n\n--------- TASK 3 ---------")
 
-let myAge = 28;
-let myFavoriteNumber = 4;
-let myHeight = 5.0;
-let myWeight = 150;
-let myFavoriteLetter = 'A';
+let myAge = 28
+let myFavoriteNumber = 4
+let myHeight = 5.0
+let myWeight = 150
+let myFavoriteLetter = 'A'
 
-console.log("My age is: ", myAge);
-console.log("My favorite number is: ", myFavoriteNumber);
-console.log("My height is: ", myHeight);
-console.log("My weight is: ", myWeight);
-console.log("My favorite letter is: ", myFavoriteLetter);
+console.log("My age is: ", myAge)
+console.log("My favorite number is: ", myFavoriteNumber)
+console.log("My height is: ", myHeight)
+console.log("My weight is: ", myWeight)
+console.log("My favorite letter is: ", myFavoriteLetter)
 
 /**
 TASK 4 
@@ -57,9 +57,9 @@ The sum of the numbers = 60
 **/
 console.log("\n\n--------- TASK 4 ---------")
 
-const num1 = 25;
-const num2 = 35;
-console.log("The sum of the numbers = ", (num1 + num2));
+const num1 = 25
+const num2 = 35
+console.log("The sum of the numbers = ", (num1 + num2))
 
 /**
 TASK 5
@@ -75,9 +75,9 @@ The product of the numbers = 35
 **/
 console.log("\n\n--------- TASK 5 ---------")
 
-const n1 = 5;
-const n2 = 7;
-console.log("The product of the numbers = ", (n1 * n2));
+const n1 = 5
+const n2 = 7
+console.log("The product of the numbers = ", (n1 * n2))
 
 /**
 TASK 6
@@ -95,13 +95,13 @@ The remainder of the numbers is = 4
 **/
 console.log("\n\n--------- TASK 6 ---------")
 
-const number1 = 24;
-const number2 = 10;
-console.log("The sum of the numbers is = ", (number1 + number2));
-console.log("The product of the numbers is = ", (number1 * number2));
-console.log("The subtraction of the numbers is = ", (number1 - number2));
-console.log("The division of the numbers is = ", (number1 / number2));
-console.log("The remainder of the numbers is = ", (number1 % number2));
+const number1 = 24
+const number2 = 10
+console.log("The sum of the numbers is = ", (number1 + number2))
+console.log("The product of the numbers is = ", (number1 * number2))
+console.log("The subtraction of the numbers is = ", (number1 - number2))
+console.log("The division of the numbers is = ", (number1 / number2))
+console.log("The remainder of the numbers is = ", (number1 % number2))
 
 
 /**
@@ -116,9 +116,9 @@ Expected output:
 The average of the numbers is: 9
 **/
 console.log("\n\n--------- TASK 7 ---------")
-const i1 = 7;
-const i2 = 11;
-let numAverage = (i1 + i2) / 2;
+const i1 = 7
+const i2 = 11
+let numAverage = (i1 + i2) / 2
 console.log("The average of the numbers is: ", numAverage)
 
 
@@ -135,9 +135,9 @@ The average of the numbers is: 12
 **/
 console.log("\n\n--------- TASK 8 ---------")
 
-let a1 = 6, a2 = 10, a3 = 12, a4 = 15, a5 = 17;
-let averageOf5 = (a1 + a2 + a3 + a4 + a5) / 5;
-console.log("The average of the numbers is:", averageOf5);
+let a1 = 6, a2 = 10, a3 = 12, a4 = 15, a5 = 17
+let averageOf5 = (a1 + a2 + a3 + a4 + a5) / 5
+console.log("The average of the numbers is:", averageOf5)
 
 /**
 TASK 9
@@ -153,17 +153,20 @@ Expected output:
 The 5 multiplied with 5 is = 25
 The 6 multiplied with 6 is = 36
 The 10 multiplied with 10 is = 100
-
 **/
 console.log("\n\n--------- TASK 9 ---------")
+const b1 = 5, b2 = 6, b3 = 10
+console.log(`The ${b1} mutltiplies with ${b1} is =  `, (b1 * b1))
+console.log(`The ${b2} multiplies with ${b2} is = `, (b2 * b2))
+console.log(`The ${b3} multiplies with ${b3} is = `, (b3 * b3))
 
 /**
 TASK 10
 Requirement:
 Create a variable called as side to be assumed as one side of the square and store value of 7 in that variable. Then, output the area and perimeter for that square.
 
-NOTE: are of s square = side * side
-perimeter of a square - 4* side
+NOTE: area of a square = side * side
+perimeter of a square = 4 * side
 
 Test Data: 7
 
@@ -172,6 +175,11 @@ The perimeter of the square = 28
 The area of the square = 49
 **/
 console.log("\n\n--------- TASK 10 ---------")
+let side = 7
+let squareArea = side * side
+let squarePerimeter = 4 * side
+console.log("The perimeter of the square = ", squarePerimeter)
+console.log("The area of the square = ", squareArea)
 
 
 /**
@@ -189,6 +197,10 @@ The favorite color is Blue
 The favorite number is 7
 **/
 console.log("\n\n--------- TASK 11 ---------")
+let favBook = "JS algorithms & Data Structures"
+let favColor = "Blue"
+let favNumber = 7
+console.log(`The favoriter book is ${favBook} \nThe favorite color is ${favColor} \nThe favorite number is ${favNumber}`)
 
 
 /**
@@ -208,3 +220,11 @@ Expected output: (it should exactly be same as below paragraph)
 	User who joined this program is John Doe. John's age is 45. John's email address is johndoe@gmail.com, phone number is (123) 123 1234, and the address is 123 St Chicago IL 12345.
 **/
 console.log("\n\n--------- TASK 12 ---------")
+let firstName = "John"
+let lastName = "Doe"
+let age = 45
+let emailAddress = "johndoe@gmail.com"
+let phoneNumber = "(123) 123 1234"
+let address ="123 St Chicago IL 12345"
+
+console.log(`User who joined this program is ${firstName} ${lastName}. ${firstName}'s email address is\n${emailAddress}, phone number is ${phoneNumber}, and the address is ${address}.`)
