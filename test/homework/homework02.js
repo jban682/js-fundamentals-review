@@ -9,13 +9,21 @@ let str1 = "5", str2 = "2";
 
 Expected results:
 The sum of 5 and 7 is = 7
-The product of 5  and 2 is = 10
+The product of 5  and 2 is = 10 
 The division of 5 and 2 is = 2.5
 The subtraction of 5 and 2 is = 3
 The remainder of 5 and 2 is = 1
 The exponentiation of 5 and 2 is = 25
-
 **/
+console.log("\n\n--------- TASK 1 ---------")
+let str1 = "5", str2 = "2";
+
+console.log(`The sum of the ${str1} and ${str2} is = ${Number(str1) + Number(str2)}`)
+console.log(`The product of the ${str1} and ${str2} is = ${Number(str1) * Number(str2)}`)
+console.log(`The division of the ${str1} and ${str2} is = ${Number(str1) / Number(str2)}`)
+console.log(`The subtraction of the ${str1} and ${str2} is = ${Number(str1) - Number(str2)}`)
+console.log(`The remainder of the ${str1} and ${str2} is = ${Number(str1) % Number(str2)}`)
+console.log(`The exponentiation of the ${str1} and ${str2} is = ${Math.pow(Number(str1), Number(str2))}`)
 
 /**
 TASK 2
@@ -29,9 +37,14 @@ The greatest values is = 200
 The smallest value is = -50
 The average is = 75
 The absolute difference is = 250
-
 **/
+console.log("\n\n--------- TASK 2 ---------")
+let s1 = "200", s2 = "-50";
 
+console.log(`The greatest values is = ${Math.max(Number(s1), Number(s2))}`)
+console.log(`The smallest value is = ${Math.min(Number(s1), Number(s2))}`)
+console.log(`The avearage is = ${(Number(s1) + Number(s2)) / 2}`)
+console.log(`The absolute difference is = ${Math.abs(Number(s1) - Number(s2))}`)
 
 /**
 TASK 3
@@ -43,8 +56,16 @@ Test Data:
 
 Expected result:
 The absolute difference between numbers is = 22
-
 **/
+console.log("\n\n--------- TASK 3 ---------")
+let randomNum1 = Math.ceil(Math.random() * 50)
+let randomNum2 = Math.ceil(Math.random() * 50)
+let absDifference = Math.abs(randomNum1 - randomNum2)
+console.log(`Test Data: ${randomNum1}, ${randomNum2}`)
+console.log(`The absolute difference between numbers is = ${absDifference}`)
+
+//OR [1 liner way to do it]
+console.log(`The absolute difference between numbers is = ${Math.abs(Math.ceil(Math.random() * 50) - Math.ceil(Math.random() * 50))}`)
 
 /**
 TASK 4
@@ -57,8 +78,18 @@ Test Data:
 Expected output:
 The max value = 45
 The min value = 3
-
 **/
+console.log("\n\n--------- TASK 4 ---------")
+let randomNumber1 = Math.ceil(Math.random() * 50)
+let randomNumber2 = Math.ceil(Math.random() * 50)
+let randomNumber3 = Math.ceil(Math.random() * 50)
+let randomNumber4 = Math.ceil(Math.random() * 50)
+let randomNumber5 = Math.ceil(Math.random() * 50)
+
+console.log(`Test Data: ${randomNumber1}, ${randomNumber2}, ${randomNumber3}, ${randomNumber4}, ${randomNumber5}`)
+
+console.log(`The max value = ${(Math.max(randomNumber1, randomNumber2, randomNumber3, randomNumber4, randomNumber5))}`)
+console.log(`The min value = ${(Math.min(randomNumber1, randomNumber2, randomNumber3, randomNumber4, randomNumber5))}`)
 
 /**
 TASK 5
@@ -76,9 +107,14 @@ The number 1 = 55
 The number 2 = 67
 The number 3 = 90
 The sum of numbers is = 212
-
 **/
+console.log("\n\n--------- TASK 5 ---------")
+let testData01 = Math.floor(Math.random() * (51) + 50)
+let testData02 = Math.floor(Math.random() * (51) + 50)
+let testData03 = Math.floor(Math.random() * (51) + 50)
 
+console.log(`The number 1 = ${testData01} \nThe number 2 =  ${testData02} \nThen number 3 = ${testData03}`)
+console.log(`The sum of numbers is = ${testData01 + testData02 + testData03}`)
 
 /**
 TASK 6
@@ -87,9 +123,18 @@ Write a program that generates 3 random numbers between 1 and 100 (1 and 100 are
 
 Print true if all numbers are greater than 25.
 Print false if any of the number is less than or equals 25.
-
 **/
+console.log("\n\n--------- TASK 6 ---------")
 
+for (let i = 1; i <= 3; i++){
+    let randomNum = Math.ceil(Math.random() * 100)
+    console.log(`Test data${i} = ${randomNum}`)
+
+    if (randomNum > 25){
+        console.log(`true`)
+    }else{
+        console.log(`false`)}
+}
 
 /**
 TASK 7
@@ -108,3 +153,11 @@ The last character in the name is = d
 The first 3 characters in the name are = Dav
 The last 3 characters in the name are = vid
 **/
+console.log("\n\n--------- TASK 7 ---------")
+let name = "David"
+
+console.log('The length of the name is =', name.length)
+console.log('The first character in the name is =', name.charAt(0))
+console.log('The last character in the name is =', name.charAt(name.length - 1))
+console.log('The first 3 characters in the name are =', name.substring(0, 3))
+console.log('The last 3 characters in the name are =', name.substring(name.length - 3, name.length))
