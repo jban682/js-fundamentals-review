@@ -5,9 +5,14 @@ Requirement:
 Write a program that outputs all the numbers that are divisible by 7 starting from 1 to 100 (both inclusive).
 Expected Output: 7 14 21  ... 91 98
 */
-
-console.log ('\n--- TASK 1 ---'); 
-
+console.log('\n--- TASK 1 ---')
+let divisibleBy7 = []
+for (let i = 7; i < 101; i++) {
+	if (i % 7 === 0) {
+		divisibleBy7.push(i) //push the number to divisibleBy7 array
+	}
+}
+console.log(divisibleBy7.join(" "))
 
 /* TASK 2
 Requirement:
@@ -15,16 +20,30 @@ Write a program that outputs all the numbers that are divisible by both 2 and 3 
 Expected Output: 6 12 18 ... 36 42 48
 */
 
-console.log ('\n--- TASK 2 ---'); 
+console.log('\n--- TASK 2 ---')
+let bothDivisibleBy2And3 = []
 
+for (let i = 2; i < 51; i++){
+	if(i % 2 === 0 && i % 3 === 0){
+		bothDivisibleBy2And3.push(i)
+	}
+}
+console.log(bothDivisibleBy2And3.join(" "))
 
 /* TASK 3
 Requirement:
 Write a program that outputs all the numbers that are divisible by 5 starting from 100 to 50 (both inclusive).
 Expected Output: 100 95 90 85 ... 60 55 50
 */
+console.log('\n--- TASK 3 ---')
+let divisibleBy5 = []
 
-console.log ('\n--- TASK 3 ---'); 
+for (let i = 100; i >= 50; i--){
+	if(i % 5 === 0){
+		divisibleBy5.push(i)
+	}
+}
+console.log(divisibleBy5.join(" "))
 
 /* TASK 4
 Requirement:
@@ -40,9 +59,11 @@ The square of 5 is =  25
 The square of 6 is =  36
 The square of 7 is =  49
 */
-
-console.log ('\n--- TASK 4 ---'); 
-
+console.log('\n--- TASK 4 ---')
+for(let i = 0; i < 8; i++){
+	let squareOfi = i * i
+	console.log(`The square of ${i} is = ${squareOfi}`)
+}
 
 /* TASK 5
 Requirement:
@@ -52,9 +73,12 @@ NOTE: Use loop!!!
 Expected Output:
 55
 */
-
-console.log ('\n--- TASK 5 ---'); 
-
+console.log('\n--- TASK 5 ---')
+let sum = 0
+for(let i = 1; i <= 10; i++){
+	sum+= i
+}
+console.log(sum)
 
 /* TASK 6
 Requirement:
@@ -67,9 +91,18 @@ For example:
 4! = 4 × 3 × 2 × 1 = 24
 0! (by convention) is defined as 1.
 */
-
-console.log ('\n--- TASK 6 ---'); 
-
+console.log('\n--- TASK 6 ---')
+let product = 1
+let task6TestData = Math.ceil(Math.random() * 10)
+for(let i = task6TestData; i >= 1; i--){
+	product*i
+	if (i === task6TestData) {
+    steps = i; // First number (e.g., "5")
+  } else {
+    steps += " × " + i; // Add the rest (e.g., " × 4", " × 3"...)
+  }
+}
+console.log(`${task6TestData}! = ${steps} = ${product}`)
 
 /* TASK 7 
 Requirement:
@@ -81,7 +114,7 @@ Expected Output:The random number is {randomNumber} and it took {attempts} attem
 */
 
 
-console.log ('\n--- TASK 7 ---'); 
+console.log('\n--- TASK 7 ---')
 
 
 
@@ -100,7 +133,7 @@ Expected Result:
 
 */
 
-console.log ('\n--- TASK 8 ---'); 
+console.log('\n--- TASK 8 ---')
 
 /* TASK 9 
 Requirement:
@@ -117,7 +150,7 @@ true
 
 */
 
-console.log ('\n--- TASK 9 ---'); 
+console.log('\n--- TASK 9 ---')
 
 
 /* TASK 10 
@@ -134,7 +167,7 @@ Expected Result:
 false
 */
 
-console.log ('\n--- TASK 10 ---'); 
+console.log('\n--- TASK 10 ---')
 
 /* TASK 11 (improved using methods)
 Requirement:
@@ -152,7 +185,7 @@ Expected Result:
 15.75
 */
 
-console.log ('\n--- TASK 11 ---'); 
+console.log('\n--- TASK 11 ---')
 
 /* TASK 12 
 Requirement:
@@ -168,7 +201,7 @@ Elements starting with 'B' or 'P' = 5
 Elements having 'book' or 'pen' = 4 
 */
 
-console.log ('\n--- TASK 12 ---'); 
+console.log('\n--- TASK 12 ---')
 
 /* TASK 13 
 Requirement:
@@ -186,7 +219,7 @@ Elements that are less than 10 = 4
 Elements that are 10 = 2
 */
 
-console.log ('\n--- TASK 13 ---'); 
+console.log('\n--- TASK 13 ---')
 
 
 /* TASK 14 
@@ -203,7 +236,7 @@ Expected Result:
 3rd array is =  [ 9, 8, 67, 1, 2 ]
 */
 
-console.log ('\n--- TASK 14 ---'); 
+console.log('\n--- TASK 14 ---')
 
 /* TASK 15 
 Requirement:
@@ -220,7 +253,7 @@ firstDuplicate([ 1, 2, 3])			-> -1
 firstDuplicate([ 'foo', 'abc', '123', 'bar’ ]) 	-> -1
 */
 
-console.log ('\n--- TASK 15 ---'); 
+console.log('\n--- TASK 15 ---')
 
 
 /* TASK 16 
@@ -237,7 +270,7 @@ getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ])	-> [ 'foo', 'a
 getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])		-> [ ]
 */
 
-console.log ('\n--- TASK 16 ---'); 
+console.log('\n--- TASK 16 ---')
 
 
 /* TASK 17 
@@ -255,7 +288,7 @@ reverseStringWords("") 			-> ""
 reverseStringWords("    ") 		-> ""
 */
 
-console.log ('\n--- TASK 17 ---'); 
+console.log('\n--- TASK 17 ---')
 
 
 /* TASK 18 
@@ -273,7 +306,7 @@ getEvens(4, 4)	-> [ 4 ]
 getEvens(3, 3)	-> [ ]
 */
 
-console.log ('\n--- TASK 18 ---'); 
+console.log('\n--- TASK 18 ---')
 
 
 /* TASK 19 
@@ -290,7 +323,7 @@ getMultipleOf5(5, 5)	-> [ 5 ]
 getMultipleOf5(2, 4)	-> [ ]
 */
 
-console.log ('\n--- TASK 19 ---'); 
+console.log('\n--- TASK 19 ---')
 
 /* TASK 20 
 Requirement:
@@ -311,4 +344,4 @@ fizzBuzz(5, 5)	-> "Buzz"
 fizzBuzz(9, 6)	-> "Fizz | 7 | 8 | Fizz"
 */
 
-console.log ('\n--- TASK 20 ---'); 
+console.log('\n--- TASK 20 ---')
