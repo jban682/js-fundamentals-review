@@ -1,3 +1,5 @@
+HOMEWORK 5 ON-WARDS: PRACTICES
+
 /* TASK 1 - array methods 
 Requirement:
  Write a function named countPos() which takes an array of numbers as an argument 

@@ -1,3 +1,5 @@
+//HOMEWORK 4: JS ARRAYS - LOOPS
+
 /* TASK 1
 Requirement:
 Write a program that outputs all the numbers that are divisible by 7 starting from 1 to 100 (both inclusive).
