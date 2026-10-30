@@ -112,13 +112,15 @@ The program should also count how many attempts it takes to generate such a numb
 Eventually, print the random number divisible by 5 with the number of attempts as below.
 Expected Output:The random number is {randomNumber} and it took {attempts} attempt/s to generate it.
 */
-
-
 console.log('\n--- TASK 7 ---')
+let attempCount = 0
 
+do{
+	randomNum7 = Math.ceil(Math.random () * 100)
+	attempCount++
+}while(randomNum7 % 5 !== 0)
 
-
-
+	console.log(`The random number is ${randomNum7} and it took ${attempCount} attempt/s to generate it.`)
 
 /* TASK 8 
 Requirement:
@@ -130,10 +132,12 @@ THEN:
 Expected Result:
 ['Germany', 'Argentina', 'Ukraine', 'Romania' ]
 [ 'Argentina', 'Germany', 'Romania', 'Ukraine' ]
-
 */
-
 console.log('\n--- TASK 8 ---')
+
+let countries = ['Germany', 'Argentina', 'Ukraine', 'Romania']
+console.log(countries)
+console.log(countries.sort())
 
 /* TASK 9 
 Requirement:
@@ -147,11 +151,16 @@ THEN:
 Expected Result:
 [ 'Scooby Doo', 'Snoopy', 'Blue', 'Pluto', 'Dino', 'Sparky' ]
 true
-
 */
-
 console.log('\n--- TASK 9 ---')
+let cartoonDogs = ['Scooby Doo', 'Snoopy', 'Blue', 'Pluto', 'Dino', 'Sparky']
+console.log(cartoonDogs)
 
+if(cartoonDogs.includes('Pluto')){
+	console.log(true)
+}else{
+	console.log(false)
+}
 
 /* TASK 10 
 Requirement:
@@ -166,8 +175,11 @@ Expected Result:
 [ 'Azrael', 'Garfield', 'Sylvester', 'Tom' ]
 false
 */
-
 console.log('\n--- TASK 10 ---')
+
+let cartoonCats = ['Garfield', 'Tom', 'Sylvester', 'Azrael']
+console.log(cartoonCats.sort())
+console.log(cartoonCats.includes('Garfield') && cartoonCats.includes('Felix'))
 
 /* TASK 11 (improved using methods)
 Requirement:
@@ -184,8 +196,13 @@ Expected Result:
 80
 15.75
 */
-
 console.log('\n--- TASK 11 ---')
+let numbers = [10.5, 20.75, 70, 80, 15.75]
+
+console.log(numbers)
+for(i = 0; i < numbers.length; i++){
+	console.log(numbers[i])
+}
 
 /* TASK 12 
 Requirement:
@@ -200,8 +217,27 @@ Expected Result:
 Elements starting with 'B' or 'P' = 5
 Elements having 'book' or 'pen' = 4 
 */
-
 console.log('\n--- TASK 12 ---')
+let objects = ['Pen', 'notebook', 'Book', 'paper', 'bag', 'pencil', 'Ruler']
+console.log(objects)
+
+let startsWithCount = 0, subStringCount = 0
+
+
+for(let i = 0; i < objects.length; i++){
+	let currentItem = objects[i].toLowerCase()
+
+	if(currentItem.startsWith('p') || currentItem.startsWith('b')){
+		startsWithCount++
+	}
+
+	if(currentItem.includes('book') || currentItem.includes('pen')){
+		subStringCount++
+	}
+}
+
+console.log(`Elements starting with 'B' or 'P' = ${startsWithCount}`)
+console.log(`Elements having 'book' or 'pen' = ${subStringCount}`)
 
 /* TASK 13 
 Requirement:
@@ -218,9 +254,32 @@ Elements that are more than 10 = 5
 Elements that are less than 10 = 4
 Elements that are 10 = 2
 */
-
 console.log('\n--- TASK 13 ---')
+let numbersStore = [3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78]
+console.log(numbersStore)
 
+let greaterThan10 = 0
+let lessThan10 = 0
+let equalTo10 = 0
+
+
+for(let i = 0; i < numbersStore.length; i++){
+	if(numbersStore[i] > 10){
+
+		greaterThan10++
+
+	}else if(numbersStore[i] < 10){
+
+		lessThan10++
+
+	}else{
+
+		equalTo10++
+	}
+}
+console.log(`Elements that are more than 10 = ${greaterThan10}`)
+console.log(`Elements that are less than 10 = ${lessThan10}`)
+console.log(`Elements that are 10 = ${equalTo10}`)
 
 /* TASK 14 
 Requirement:
@@ -235,8 +294,8 @@ Expected Result:
 2nd array is = [ 9, 3, 67, 1, 0 ]
 3rd array is =  [ 9, 8, 67, 1, 2 ]
 */
-
 console.log('\n--- TASK 14 ---')
+
 
 /* TASK 15 
 Requirement:
