@@ -12,8 +12,8 @@ Rebuilding core JavaScript knowledge for Full Stack QA and automation work.
 ## Progress
 **Modules**
 - [x] Modules 1–5: COMPLETED
-- [X] Modules 6–10: IN PROGRESS
-- [ ] Modules 11–15
+- [x] Modules 6–10: COMPLETED
+- [x] Modules 11–15: IN PROGRESS
 - [ ] Modules 16–20
 - [ ] Modules 21–23
 
