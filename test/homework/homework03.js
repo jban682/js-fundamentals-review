@@ -226,7 +226,7 @@ function startVowel(word) {
     let wordTestData = word.trim().toLowerCase().charAt(0)
     let vowelsChar = ['a', 'e', 'i', 'o', 'u']
 
-    if (vowelsChar.includes(wordTestData)) {
+   if (vowelsChar.includes(wordTestData)) {
         return true
     } else {
         return false

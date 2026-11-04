@@ -5,9 +5,14 @@ Requirement:
 Write a program that outputs all the numbers that are divisible by 7 starting from 1 to 100 (both inclusive).
 Expected Output: 7 14 21  ... 91 98
 */
-
-console.log ('\n--- TASK 1 ---'); 
-
+console.log('\n--- TASK 1 ---')
+let divisibleBy7 = []
+for (let i = 7; i < 101; i++) {
+	if (i % 7 === 0) {
+		divisibleBy7.push(i) //push the number to divisibleBy7 array
+	}
+}
+console.log(divisibleBy7.join(" "))
 
 /* TASK 2
 Requirement:
@@ -15,16 +20,30 @@ Write a program that outputs all the numbers that are divisible by both 2 and 3 
 Expected Output: 6 12 18 ... 36 42 48
 */
 
-console.log ('\n--- TASK 2 ---'); 
+console.log('\n--- TASK 2 ---')
+let bothDivisibleBy2And3 = []
 
+for (let i = 2; i < 51; i++) {
+	if (i % 2 === 0 && i % 3 === 0) {
+		bothDivisibleBy2And3.push(i)
+	}
+}
+console.log(bothDivisibleBy2And3.join(" "))
 
 /* TASK 3
 Requirement:
 Write a program that outputs all the numbers that are divisible by 5 starting from 100 to 50 (both inclusive).
 Expected Output: 100 95 90 85 ... 60 55 50
 */
+console.log('\n--- TASK 3 ---')
+let divisibleBy5 = []
 
-console.log ('\n--- TASK 3 ---'); 
+for (let i = 100; i >= 50; i--) {
+	if (i % 5 === 0) {
+		divisibleBy5.push(i)
+	}
+}
+console.log(divisibleBy5.join(" "))
 
 /* TASK 4
 Requirement:
@@ -40,9 +59,11 @@ The square of 5 is =  25
 The square of 6 is =  36
 The square of 7 is =  49
 */
-
-console.log ('\n--- TASK 4 ---'); 
-
+console.log('\n--- TASK 4 ---')
+for (let i = 0; i < 8; i++) {
+	let squareOfi = i * i
+	console.log(`The square of ${i} is = ${squareOfi}`)
+}
 
 /* TASK 5
 Requirement:
@@ -52,9 +73,12 @@ NOTE: Use loop!!!
 Expected Output:
 55
 */
-
-console.log ('\n--- TASK 5 ---'); 
-
+console.log('\n--- TASK 5 ---')
+let sum = 0
+for (let i = 1; i <= 10; i++) {
+	sum += i
+}
+console.log(sum)
 
 /* TASK 6
 Requirement:
@@ -67,9 +91,18 @@ For example:
 4! = 4 × 3 × 2 × 1 = 24
 0! (by convention) is defined as 1.
 */
-
-console.log ('\n--- TASK 6 ---'); 
-
+console.log('\n--- TASK 6 ---')
+let product = 1
+let task6TestData = Math.ceil(Math.random() * 10)
+for (let i = task6TestData; i >= 1; i--) {
+	product *= i
+	if (i === task6TestData) {
+		steps = i // First number (e.g., "5")
+	} else {
+		steps += " × " + i // Add the rest (e.g., " × 4", " × 3"...)
+	}
+}
+console.log(`${task6TestData}! = ${steps} = ${product}`)
 
 /* TASK 7 
 Requirement:
@@ -79,13 +112,15 @@ The program should also count how many attempts it takes to generate such a numb
 Eventually, print the random number divisible by 5 with the number of attempts as below.
 Expected Output:The random number is {randomNumber} and it took {attempts} attempt/s to generate it.
 */
+console.log('\n--- TASK 7 ---')
+let attempCount = 0
 
+do {
+	randomNum7 = Math.ceil(Math.random() * 100)
+	attempCount++
+} while (randomNum7 % 5 !== 0)
 
-console.log ('\n--- TASK 7 ---'); 
-
-
-
-
+console.log(`The random number is ${randomNum7} and it took ${attempCount} attempt/s to generate it.`)
 
 /* TASK 8 
 Requirement:
@@ -97,10 +132,12 @@ THEN:
 Expected Result:
 ['Germany', 'Argentina', 'Ukraine', 'Romania' ]
 [ 'Argentina', 'Germany', 'Romania', 'Ukraine' ]
-
 */
+console.log('\n--- TASK 8 ---')
 
-console.log ('\n--- TASK 8 ---'); 
+let countries = ['Germany', 'Argentina', 'Ukraine', 'Romania']
+console.log(countries)
+console.log(countries.sort())
 
 /* TASK 9 
 Requirement:
@@ -114,11 +151,11 @@ THEN:
 Expected Result:
 [ 'Scooby Doo', 'Snoopy', 'Blue', 'Pluto', 'Dino', 'Sparky' ]
 true
-
 */
-
-console.log ('\n--- TASK 9 ---'); 
-
+console.log('\n--- TASK 9 ---')
+let cartoonDogs = ['Scooby Doo', 'Snoopy', 'Blue', 'Pluto', 'Dino', 'Sparky']
+console.log(cartoonDogs)
+console.log(cartoonDogs.includes('Pluto'))
 
 /* TASK 10 
 Requirement:
@@ -133,8 +170,11 @@ Expected Result:
 [ 'Azrael', 'Garfield', 'Sylvester', 'Tom' ]
 false
 */
+console.log('\n--- TASK 10 ---')
 
-console.log ('\n--- TASK 10 ---'); 
+let cartoonCats = ['Garfield', 'Tom', 'Sylvester', 'Azrael']
+console.log(cartoonCats.sort())
+console.log(cartoonCats.includes('Garfield') && cartoonCats.includes('Felix'))
 
 /* TASK 11 (improved using methods)
 Requirement:
@@ -151,8 +191,13 @@ Expected Result:
 80
 15.75
 */
+console.log('\n--- TASK 11 ---')
+let numbers = [10.5, 20.75, 70, 80, 15.75]
 
-console.log ('\n--- TASK 11 ---'); 
+console.log(numbers)
+for (i = 0; i < numbers.length; i++) {
+	console.log(numbers[i])
+}
 
 /* TASK 12 
 Requirement:
@@ -167,8 +212,26 @@ Expected Result:
 Elements starting with 'B' or 'P' = 5
 Elements having 'book' or 'pen' = 4 
 */
+console.log('\n--- TASK 12 ---')
+let objects = ['Pen', 'notebook', 'Book', 'paper', 'bag', 'pencil', 'Ruler']
+console.log(objects)
 
-console.log ('\n--- TASK 12 ---'); 
+let startsWithCount = 0, subStringCount = 0
+
+for (let i = 0; i < objects.length; i++) {
+	let currentItem = objects[i].toLowerCase()
+
+	if (currentItem.startsWith('p') || currentItem.startsWith('b')) {
+		startsWithCount++
+	}
+
+	if (currentItem.includes('book') || currentItem.includes('pen')) {
+		subStringCount++
+	}
+}
+
+console.log(`Elements starting with 'B' or 'P' = ${startsWithCount}`)
+console.log(`Elements having 'book' or 'pen' = ${subStringCount}`)
 
 /* TASK 13 
 Requirement:
@@ -185,9 +248,31 @@ Elements that are more than 10 = 5
 Elements that are less than 10 = 4
 Elements that are 10 = 2
 */
+console.log('\n--- TASK 13 ---')
+let numbersStore = [3, 5, 7, 10, 0, 20, 17, 10, 23, 56, 78]
+console.log(numbersStore)
 
-console.log ('\n--- TASK 13 ---'); 
+let greaterThan10 = 0
+let lessThan10 = 0
+let equalTo10 = 0
 
+for (let i = 0; i < numbersStore.length; i++) {
+	if (numbersStore[i] > 10) {
+
+		greaterThan10++
+
+	} else if (numbersStore[i] < 10) {
+
+		lessThan10++
+
+	} else {
+
+		equalTo10++
+	}
+}
+console.log(`Elements that are more than 10 = ${greaterThan10}`)
+console.log(`Elements that are less than 10 = ${lessThan10}`)
+console.log(`Elements that are 10 = ${equalTo10}`)
 
 /* TASK 14 
 Requirement:
@@ -202,8 +287,19 @@ Expected Result:
 2nd array is = [ 9, 3, 67, 1, 0 ]
 3rd array is =  [ 9, 8, 67, 1, 2 ]
 */
+console.log('\n--- TASK 14 ---')
+let arr1 = [5, 8, 13, 1, 2]
+let arr2 = [9, 3, 67, 1, 0]
+let arr3 = []
 
-console.log ('\n--- TASK 14 ---'); 
+for (let i = 0; i < arr1.length; i++) {
+	const greatestValue = Math.max(arr1[i], arr2[i])
+
+	arr3.push(greatestValue)
+}
+console.log(`1st array is =`, arr1)
+console.log(`2nd array is =`, arr2)
+console.log(`3rd array is =`, arr3)
 
 /* TASK 15 
 Requirement:
@@ -219,9 +315,27 @@ firstDuplicate([ 123, 'abc', '123', 3, 'abc' ])	-> 'abc'
 firstDuplicate([ 1, 2, 3])			-> -1
 firstDuplicate([ 'foo', 'abc', '123', 'bar’ ]) 	-> -1
 */
+console.log('\n--- TASK 15 ---')
 
-console.log ('\n--- TASK 15 ---'); 
-
+function firstDuplicate(array) {
+	//check each array position
+	for (let i = 0; i < array.length; i++) {
+		let currentItem = array[i]
+		//looking for duplicate starting on the next position
+		for (let positionAhead = i + 1; positionAhead < array.length; positionAhead++) {
+			if (array[positionAhead] === currentItem) {
+				return currentItem
+			}
+		}
+	}
+	return -1
+}
+console.log(firstDuplicate([3, 7, 10, 0, 3, 10]))
+console.log(firstDuplicate([5, 7, 7, 0, 5, 10])) //the expected is 5
+console.log(firstDuplicate([5, '5', 3, 7, 4]))
+console.log(firstDuplicate([123, 'abc', '123', 3, 'abc']))
+console.log(firstDuplicate([1, 2, 3]))
+console.log(firstDuplicate(['foo', 'abc', '123', 'bar’']))
 
 /* TASK 16 
 Requirement:
@@ -233,12 +347,32 @@ value and data types of the elements must be same.
 Examples:
 getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ])		-> [ 0, -7 ]
 getDuplicates([ 1, 2, 5, 0, 7 ])			-> [ ]
-getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ])	-> [ 'foo', 'a’ ]
-getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])		-> [ ]
+getDuplicates(['A', 'foo', '12’', 12, 'bar', 'a', 'a', 'foo' ])	-> [ 'foo', 'a’ ]
+getDuplicates([ 'foo', '12’', 12, 'bar', 'a' ])		-> [ ]
 */
+console.log('\n--- TASK 16 ---')
 
-console.log ('\n--- TASK 16 ---'); 
+function getDuplicates(array) {
+	let duplicates = []
 
+	for (let i = 0; i < array.length; i++) {
+		let currentItem = array[i]
+
+		for (let duplicatePosition = i + 1; duplicatePosition < array.length; duplicatePosition++) {
+			if (array[duplicatePosition] === currentItem) {
+				if (!duplicates.includes(currentItem)) {
+					duplicates.push(currentItem)
+				}
+			}
+		}
+	}
+	return duplicates
+}
+
+console.log(getDuplicates([0, -4, -7, 0, 5, 10, 45, -7, 0]))
+console.log(getDuplicates([1, 2, 5, 0, 7]))
+console.log(getDuplicates(['A', 'foo', '12’', 12, 'bar', 'a', 'a', 'foo']))
+console.log(getDuplicates(['foo', '12’', 12, 'bar', 'a']))
 
 /* TASK 17 
 Requirement:
@@ -254,9 +388,34 @@ reverseStringWords("Hello") 		-> "olleH"
 reverseStringWords("") 			-> ""
 reverseStringWords("    ") 		-> ""
 */
+console.log('\n--- TASK 17 ---')
 
-console.log ('\n--- TASK 17 ---'); 
+//let word = "Hello World"
+//let splitWord = word.trim().split(" ")
+//let reverse = splitWord.split('').reverse().join('')
 
+//console.log(word)
+//console.log(splitWord)
+//console.log(reverse)
+
+function reverseStringWords(string){
+	let toSplitString = string.trim().split(" ")
+	let result = []
+
+	for(let i = 0; i < toSplitString.length; i++){
+		let word = toSplitString[i]
+		let reverseWords = word.split("").reverse().join("")
+
+		result.push(reverseWords)
+	}
+	return result.join(" ")
+}
+	
+console.log(reverseStringWords("Hello World"))
+console.log(reverseStringWords("I like JavaScript"))
+console.log(reverseStringWords("Hello"))
+console.log(reverseStringWords(""))
+console.log(reverseStringWords("    ")) 
 
 /* TASK 18 
 Requirement:
@@ -272,9 +431,24 @@ getEvens(17, 5)	-> [ 6, 8, 10, 12, 14, 16 ]
 getEvens(4, 4)	-> [ 4 ]
 getEvens(3, 3)	-> [ ]
 */
+console.log('\n--- TASK 18 ---')
 
-console.log ('\n--- TASK 18 ---'); 
+function getEvens(num1, num2) {
+	let evenNum = []
+	let getMin = Math.min(num1, num2)
+	let getMax = Math.max(num1, num2)
 
+	for (let i = getMin; i <= getMax; i++) {
+		if (i % 2 === 0) {
+			evenNum.push(i)
+		}
+	}
+	return evenNum
+}
+console.log(getEvens(2, 7))
+console.log(getEvens(17, 5))
+console.log(getEvens(4, 4))
+console.log(getEvens(3, 3))
 
 /* TASK 19 
 Write a function named as getMultipleOf5() which takes 2 number arguments and 
@@ -289,8 +463,29 @@ getMultipleOf5(23, 5)	-> [ 20, 15, 10, 5 ]
 getMultipleOf5(5, 5)	-> [ 5 ]
 getMultipleOf5(2, 4)	-> [ ]
 */
+console.log('\n--- TASK 19 ---')
+const getMultipleOf5 = function (num1, num2) {
+	let getMin = Math.min(num1, num2)
+	let getMax = Math.max(num1, num2)
+	let divisibleBy5 = []
 
-console.log ('\n--- TASK 19 ---'); 
+	for (let i = getMin; i <= getMax; i++) {
+		if (i % 5 === 0) {
+			divisibleBy5.push(i)
+		}
+	}
+
+	if (num1 > num2) {
+		divisibleBy5.reverse()
+	}
+
+	return divisibleBy5
+}
+
+console.log(getMultipleOf5(3, 17))
+console.log(getMultipleOf5(23, 5))
+console.log(getMultipleOf5(5, 5))
+console.log(getMultipleOf5(2, 4))
 
 /* TASK 20 
 Requirement:
@@ -310,5 +505,28 @@ fizzBuzz(12, 5)	-> "Buzz | Fizz | 7 | 8 | Fizz | Buzz | 11 | Fizz"
 fizzBuzz(5, 5)	-> "Buzz"
 fizzBuzz(9, 6)	-> "Fizz | 7 | 8 | Fizz"
 */
+console.log('\n--- TASK 20 ---')
+const fizzBuzz = function(num1, num2){
+	let minNumber = Math.min(num1, num2)
+	let maxNumber = Math.max(num1, num2)
+	let within2Numbers = []
+	
+	for(let i = minNumber; i <= maxNumber; i++){
+		if(i % 3 === 0 && i % 5 === 0){
+			within2Numbers.push('FizzBuzz')
+		}else if(i % 3 === 0){
+			within2Numbers.push('Fizz')
+		}else if(i % 5 === 0){
+			within2Numbers.push('Buzz')
+		}else{
+			within2Numbers.push(i)
+		}
+	}
 
-console.log ('\n--- TASK 20 ---'); 
+	return within2Numbers.join(' | ')
+}
+
+console.log(fizzBuzz(13, 18))
+console.log(fizzBuzz(12, 5))
+console.log(fizzBuzz(5, 5))
+console.log(fizzBuzz(9, 6))

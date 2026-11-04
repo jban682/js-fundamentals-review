@@ -1,16 +1,27 @@
-HOMEWORK 5 ON-WARDS: PRACTICES
+//HOMEWORK 5 ON-WARDS: PRACTICES
 
 /* TASK 1 - array methods 
 Requirement:
  Write a function named countPos() which takes an array of numbers as an argument 
- and returns how many elements are positive​ when invoked. 
+ and returns how many elements are positive​ when invoked.
 Examples:
  countPos([-45, 0, 0, 34, 5, 67])       -> 3
  countPos([-23, -4, 0, 2, 5, 90, 123])  -> 4
  countPos([0, -1, -2, -3])              -> 0
 */
+console.log('\n--- TASK 1 ---')
 
-console.log ('\n--- TASK 1 ---'); 
+function countPos(array) {
+    const positive = array.filter(function (number) {
+        return number > 0
+    })
+
+    return positive.length
+}
+
+console.log(countPos([-45, 0, 0, 34, 5, 67]))
+console.log(countPos([-23, -4, 0, 2, 5, 90, 123]))
+console.log(countPos([0, -1, -2, -3]))
 
 /* TASK 2  - array methods 
 Requirement:
@@ -24,8 +35,27 @@ Examples:
  countA("Cypress")                          -> 0
 */
 
-console.log ('\n--- TASK 2 ---'); 
+console.log('\n--- TASK 2 ---')
+//clever and showing off approach
+/*function countA(string){
+   return string.toLowerCase().split("a").length - 1    
+}*/
 
+function countA(string) {
+    let count = 0
+    let words = string.toLowerCase().split("")
+
+    words.forEach(char => {
+        if (char.includes('a')) {
+            count++
+        }
+    })
+    return count
+}
+
+console.log(countA("TechGlobal is a QA bootcamp"))
+console.log(countA("QA stands for Quality Assurance"))
+console.log(countA("Cypress"))
 
 /* TASK 3
 Requirement: array - methods
@@ -40,8 +70,24 @@ Examples:
  countVowels("")                  -> 0
 */
 
-console.log ('\n--- TASK 3 ---'); 
+console.log('\n--- TASK 3 ---')
+function countVowels(string) {
+    const vowels = 'aieou'
+    let count = 0
+    let words = string.toLowerCase().split("")
 
+    words.forEach(char => {
+        if (vowels.includes(char)) {
+            count++
+        }
+    })
+    return count
+}
+
+console.log(countVowels("Hello"))
+console.log(countVowels("Hello World"))
+console.log(countVowels("JavaScript is fun"))
+console.log(countVowels(""))
 
 /* TASK 4 array method - reduce 
 Requirement: 
@@ -56,7 +102,15 @@ Examples:
  countConsonants("")                    -> 0
 */
 
-console.log ('\n--- TASK 4 ---'); 
+console.log('\n--- TASK 4 ---')
+function countConsonants(string) {
+    let words = string.trim().split("")
+    console.log(words)
+
+    //words.reduce()
+}
+
+console.log(countConsonants("Hello"))
 
 
 /* TASK 5 - string method
@@ -70,9 +124,21 @@ Examples:
  countWords("Cypress is an UI automation tool.    ")     -> 6 
  countWords("1 2 3 4")                                   -> 4
 */
+console.log('\n--- TASK 5 ---')
 
-console.log ('\n--- TASK 5 ---'); 
+function countWords(string) {
+    let count = 0
+    let words = string.trim().split(" ")
 
+    words.forEach(word => {
+        count++
+    })
+    return count
+}
+
+console.log(countWords("     Javascript is fun       "))
+console.log(countWords("Cypress is an UI automation tool.    "))
+console.log(countWords("1 2 3 4"))
 
 /* TASK 6
 Requirement:
@@ -88,7 +154,9 @@ Examples:
  factorial(1)		-> 1
 */
 
-console.log ('\n--- TASK 6 ---'); 
+console.log('\n--- TASK 6 ---')
+
+//function factorial(number){}
 
 /* TASK 7 - array method reverse, spread, join
 Requirement: 
@@ -110,7 +178,25 @@ Examples:
  isPalindrome("")            -> true
 */
 
-console.log ('\n--- TASK 7 ---'); 
+console.log('\n--- TASK 7 ---')
+function isPalindrome(string) {
+    let word1 = string.toLowerCase()
+    let word2 = word1.split("").reverse().join("")
+    if (word1 === word2) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(isPalindrome("Hello"))
+console.log(isPalindrome("Kayak"))
+console.log(isPalindrome("civic"))
+console.log(isPalindrome("abba"))
+console.log(isPalindrome("ab  a"))
+console.log(isPalindrome("123454321"))
+console.log(isPalindrome("A"))
+console.log(isPalindrome(""))
 
 /* TASK 8 array reduce method 
 Requirement: 
@@ -125,7 +211,8 @@ Examples:
  countMultipleWords([ ])                                                 -> 0
 */
 
-console.log ('\n--- TASK 8 ---'); 
+console.log('\n--- TASK 8 ---')
+//function countMultipleWords(array){}
 
 /* TASK 9
 Requirement: 
@@ -139,7 +226,21 @@ Examples:
  count3OrLess("")                    -> 0
 */
 
-console.log ('\n--- TASK 9 ---'); 
+console.log('\n--- TASK 9 ---')
+function count3OrLess(string) {
+    let wordCount = string.trim().split(" ")
+
+    const countCharEachWord = wordCount.filter(function(word){
+        return word.length > 0 && word.length <= 3
+    })
+
+    return countCharEachWord.length
+}
+console.log(count3OrLess("Hello"))
+console.log(count3OrLess("Hi John"))
+console.log(count3OrLess("JavaScript is fun"))
+console.log(count3OrLess("My name is John Doe"))
+console.log(count3OrLess(""))
 
 /* TASK 10
 Requirement:
@@ -161,7 +262,7 @@ Examples:
  isPrime(1)   -> false
 */
 
-console.log ('\n--- TASK 10 ---'); 
+console.log('\n--- TASK 10 ---')
 
 
 
@@ -177,7 +278,7 @@ Examples:
  add([-5, 6, -3, 11], [5, -6, 3, -11])                 -> [0, 0, 0, 0]
 */
 
-console.log ('\n--- TASK 11 ---'); 
+console.log('\n--- TASK 11 ---')
 
 /* TASK 12
 Requirement: 
@@ -190,7 +291,7 @@ Examples:
  removeExtraSpaces("")                                   -> "" 
 */
 
-console.log ('\n--- TASK 12 ---'); 
+console.log('\n--- TASK 12 ---')
 
 /* TASK 13
 Requirement: 
@@ -208,7 +309,7 @@ Examples:
  findClosestTo10([0, -1, -2])               -> 0
 */
 
-console.log ('\n--- TASK 13 ---'); 
+console.log('\n--- TASK 13 ---')
 
 
 /* TASK 14
@@ -234,7 +335,7 @@ Examples:
  isEmailValid("johndoe@gmail.com")  -> true
 */
 
-console.log ('\n--- TASK 14 ---'); 
+console.log('\n--- TASK 14 ---')
 
 
 /* TASK 15
@@ -256,4 +357,4 @@ Examples:
  isPasswordValid("Test1234#")         -> true
 */
 
-console.log ('\n--- TASK 15 ---'); 
+console.log('\n--- TASK 15 ---')

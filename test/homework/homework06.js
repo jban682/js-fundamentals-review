@@ -9,6 +9,17 @@ Examples:
  noSpace(" Hello World   ")     -> "HelloWorld”
  noSpace("Tech Global")         -> "TechGlobal"
 */
+console.log ('\n--- TASK 1 ---');
+
+function noSpace(string){
+    return string.trim()
+}
+
+console.log(noSpace(`""`))
+console.log(noSpace("JavaScript"))
+console.log(noSpace("    Hello   "))
+console.log(noSpace(" Hello World   "))
+console.log(noSpace("Tech Global"))
 
 /* Task 2 
 Requirement:
